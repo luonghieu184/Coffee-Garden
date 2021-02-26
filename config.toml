@@ -1,0 +1,22 @@
+
+baseURL = "localhost:1313"
+title = "Coffee Sông Trăng | Điểm Tâm Sáng - Cơm Trưa Văn Phòng"
+theme = "cfgarden"
+
+languageCode = "vi-VN"
+DefaultContentLanguage = "vi"
+paginate = 12
+
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+
+[params]
+  author = "Coffee Sông Trăng"
+  facebook = "https://facebook.com/coffeesongtrang"
+  og_image = "/images/og.png"
+  sitename = "Coffee Sông Trăng"
+  description = "s"
+  twitter = "@coffeesongtrang"
+

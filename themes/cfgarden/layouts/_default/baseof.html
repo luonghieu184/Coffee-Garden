@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{- partial "head.html" . -}}
+        {{ partial "meta" . }}
+    </head>
+
+    <body>
+        {{- partial "nav.html" . -}}
+
+        {{- partial "header.html" . -}}
+
+        {{ if .IsHome }}{{ .Site.Params.description }}
+        
+        {{ else }}
+        <div id="content">
+            {{- block "main" . }}
+        
+            
+            {{- end }}
+        </div>
+        {{ end }}
+       
+        {{- partial "main.html" . -}}
+
+        {{- partial "footer.html" . -}}
+        {{- partial "script.html" . -}}
+
+    </body>
+</html>

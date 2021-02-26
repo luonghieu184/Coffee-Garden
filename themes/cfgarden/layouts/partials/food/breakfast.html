@@ -1,0 +1,55 @@
+<div class="soda">
+  <div class="py-3 title d-flex align-items-center">
+    <h5 class="m-0">ĐIỂM TÂM SÁNG</h5>
+    <a class="font-weight-bold ml-auto" href="most_popular.html">XEM TẤT CẢ<i class="feather-chevrons-right"></i></a>
+  </div>
+  <div class="row">
+    {{ range first 4 (where site.RegularPages "Type" "post") }}
+    {{ if  in .Params.categories "Breakfast"}}
+
+    <div class="col-md-3 pb-3">
+      <div class="list-card bg-white  rounded overflow-hidden position-relative shadow-sm">
+
+        <div class="list-card-image">
+            
+          <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i> 3.1
+              (300+)</span></div>
+          <div class="favourite-heart text-danger position-absolute"><a href="#"><i class="feather-heart"></i></a></div>
+          <div class="member-plan position-absolute"><span class="badge badge-dark">{{range .Params.Categories}}{{. | humanize}}{{end}}</span></div>
+          <a href="{{ .Permalink }}">
+            {{ if .Params.image }}
+             <img alt="{{ .Title }}" src="{{ .Params.image }}" class="img-fluid item-img w-100">
+            {{ else }}
+            <img alt="{{ .Title }}" src="img/500x300.jpg" class="img-fluid item-img w-100">
+            {{ end }}
+          </a>
+        </div>
+        <div class="p-3 position-relative">
+          <div class="list-card-body">
+            <h6 class="mb-1"><a href="restaurant.html" class="text-black">{{.Title}}</a></h6>
+            <p class="text-gray mb-1 small">Từ Khóa 1 • Từ Khóa 2</p>
+            <p class="text-gray mb-1 rating">
+            </p>
+            <ul class="rating-stars list-unstyled">
+
+            </ul>
+            <p></p>
+          </div>
+          <div class="list-card-badge">
+            <span class="badge badge-success">           
+              {{ if .Params.price }}
+              {{ .Params.price }} VND
+              {{ else }}
+                LIÊN HỆ
+              {{ end }}</span> <small></small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    {{ end }}
+    {{ end }}
+
+  </div>
+
+</div>
