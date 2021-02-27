@@ -1,5 +1,5 @@
 
-baseURL = "https://coffee-garden-beta.netlify.app"
+baseURL = "localhost:1313"
 title = "Coffee Sông Trăng | Điểm Tâm Sáng - Cơm Trưa Văn Phòng"
 theme = "cfgarden"
 

@@ -1399,3 +1399,15 @@ footer .text-muted {
         max-width: 100%;
     }
 }
+nav#TableOfContents ul {
+    padding: 0 17px;
+}
+
+nav#TableOfContents ul li {
+    list-style-type: none;
+    padding: 4px 0;
+}
+
+nav#TableOfContents ul li a {
+    color: #094e01;
+}

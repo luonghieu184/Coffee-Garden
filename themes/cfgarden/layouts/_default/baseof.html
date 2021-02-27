@@ -7,22 +7,21 @@
 
     <body>
         {{- partial "nav.html" . -}}
-
         {{- partial "header.html" . -}}
 
-        {{ if .IsHome }}{{ .Site.Params.description }}
-        
+        {{ if .IsHome }}
+            {{- partial "main.html" . -}}
         {{ else }}
-        <div id="content">
-            {{- block "main" . }}
-        
             
-            {{- end }}
-        </div>
+            <div id="content">
+                {{- block "main" . -}}
+            
+                
+                {{- end }}
+            </div>
         {{ end }}
        
-        {{- partial "main.html" . -}}
-
+    
         {{- partial "footer.html" . -}}
         {{- partial "script.html" . -}}
 
