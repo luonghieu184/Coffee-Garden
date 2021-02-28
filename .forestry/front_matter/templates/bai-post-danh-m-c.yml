@@ -4,25 +4,56 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Tiêu Đề
+  config:
+    required: true
 - type: datetime
   name: date
-  label: date
+  label: Ngày Đăng
 - type: text
   name: description
-  label: description
-- type: text
-  name: type
-  label: type
-- type: text
-  name: image
-  label: image
+  label: Mô Tả
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Hình Ảnh (Feature)
+  showOnly:
+    value: post
+- name: type
+  type: select
+  default: ''
+  config:
+    required: true
+    options:
+    - post
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Kiểu Bài Viết
 - type: text
   name: price
-  label: price
+  label: Đơn Giá
 - type: list
   name: categories
-  label: categories
+  label: Danh Mục
+  config:
+    use_select: true
+    source:
+      type: simple
+      section: ''
+    options:
+    - Hạt Chia
+    - Thức Uống Pha
+    - Kem
+    - Sinh Tố
+    - SODA
+    - Trà
+    - Yaour
+    - Breakfast
+    - Lunch
 - type: list
   name: tags
   label: tags
