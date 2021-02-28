@@ -1,0 +1,28 @@
+---
+label: Bài Post Danh Mục
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: description
+  label: description
+- type: text
+  name: type
+  label: type
+- type: text
+  name: image
+  label: image
+- type: text
+  name: price
+  label: price
+- type: list
+  name: categories
+  label: categories
+- type: list
+  name: tags
+  label: tags
