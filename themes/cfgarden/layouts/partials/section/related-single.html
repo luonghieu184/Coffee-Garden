@@ -1,0 +1,46 @@
+
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+  <div class="container">
+    <div class="">
+        {{ with $related }}
+        <p class="font-weight-bold pt-4 m-0">GỢI Ý DÀNH CHO BẠN</p>
+        <div class="trending-slider rounded">
+        {{ range . }}
+            <div class="osahan-slider-item">
+            <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
+                <div class="list-card-image">
+                    <a href="{{ .RelPermalink }}">
+                        {{ if .Params.image }}
+                        <img alt="{{ .Title }}" src="{{ .Params.image }}" class="img-fluid item-img w-100">
+                        {{ else }}
+                        <img alt="{{ .Title }}" src="/img/500x300.jpg" class="img-fluid item-img w-100">
+                        {{ end }}
+                    </a>
+                </div>
+                <div class="p-3 position-relative">
+                <div class="list-card-body">
+                    <h6 class="mb-1"><a href="{{ .RelPermalink }}" class="text-black">{{ .Title }}</a>
+                    </h6>
+                    <p class="text-gray mb-3">
+                        {{ with .Params.tags }}
+                          {{ range . }}
+                            <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }} • </a> 
+                          {{ end }}
+                        </ul>
+                        {{ end }}</p>
+                    <p class="text-gray m-0"> <span class="text-black-50"> 
+                        {{ if .Params.price }}
+                        {{ .Params.price }} VND
+                        {{ else }}
+                        LIÊN HỆ
+                        {{ end }}</span></p>
+                </div>
+                </div>
+            </div>
+            </div>
+        {{ end }}
+        </div>    
+        {{ end }}
+  
+    </div>
+  </div>

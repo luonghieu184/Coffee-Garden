@@ -1,33 +1,4 @@
 {{ define "main" }}
-<aside id="meta">
-    <div>
-    <section>
-      <h4 id="date">  </h4>
-    </section>
-    {{ with .Params.topics }}
-    <ul id="topics">
-      {{ range . }}
-        <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
-      {{ end }}
-    </ul>
-    {{ end }}
-    {{ with .Params.tags }}
-    <ul id="tags">
-      {{ range . }}
-        <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
-      {{ end }}
-    </ul>
-    {{ end }}
-    </div>
-    <div>
-        {{ with .PrevInSection }}
-          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-        {{ with .NextInSection }}
-          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-    </div>
-</aside>
 
 <div class="d-none">
   <div class="bg-primary p-3 d-flex align-items-center">
@@ -73,79 +44,7 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="">
-    <p class="font-weight-bold pt-4 m-0">GỢI Ý DÀNH CHO BẠN</p>
-
-    <div class="trending-slider rounded">
-      <div class="osahan-slider-item">
-        <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
-          <div class="list-card-image">
-            <a href="checkout.html">
-              <img alt="#" src="img/trending1.png" class="img-fluid item-img w-100">
-            </a>
-          </div>
-          <div class="p-3 position-relative">
-            <div class="list-card-body">
-              <h6 class="mb-1"><a href="checkout.html" class="text-black">Famous Dave's Bar-B-Que</a>
-              </h6>
-              <p class="text-gray mb-3">Vegetarian • Indian • Pure veg</p>
-              <p class="text-gray m-0"> <span class="text-black-50"> $350 FOR TWO</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="osahan-slider-item">
-        <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
-          <div class="list-card-image">
-            <a href="checkout.html">
-              <img alt="#" src="img/trending2.png" class="img-fluid item-img w-100">
-            </a>
-          </div>
-          <div class="p-3 position-relative">
-            <div class="list-card-body">
-              <h6 class="mb-1"><a href="checkout.html" class="text-black">Thai Famous Cuisine</a></h6>
-              <p class="text-gray mb-3">North Indian • Indian • Pure veg</p>
-              <p class="text-gray m-0"> <span class="text-black-50"> $250 FOR TWO</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="osahan-slider-item">
-        <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
-          <div class="list-card-image">
-            <a href="checkout.html">
-              <img alt="#" src="img/trending3.png" class="img-fluid item-img w-100">
-            </a>
-          </div>
-          <div class="p-3 position-relative">
-            <div class="list-card-body">
-              <h6 class="mb-1"><a href="checkout.html" class="text-black">The osahan Restaurant</a></h6>
-              <p class="text-gray mb-3">North • Hamburgers • Pure veg</p>
-              <p class="text-gray m-0"> <span class="text-black-50"> $500 FOR TWO</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="osahan-slider-item">
-        <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
-          <div class="list-card-image">
-            <a href="checkout.html">
-              <img alt="#" src="img/trending2.png" class="img-fluid item-img w-100">
-            </a>
-          </div>
-          <div class="p-3 position-relative">
-            <div class="list-card-body">
-              <h6 class="mb-1"><a href="checkout.html" class="text-black">Thai Famous Cuisine</a></h6>
-              <p class="text-gray mb-3">North Indian • Indian • Pure veg</p>
-              <p class="text-gray m-0"> <span class="text-black-50"> $250 FOR TWO</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+{{ partial "section/related-single.html" . }}
 
 <div class="container position-relative">
   <div class="row">
@@ -162,7 +61,17 @@
                   {{ .Content }}
                 </div>
               </div>
+              <div class="p-3 border-bottom gold-members">
+                {{ with .Params.tags }}
+                <ul id="tags">
+                  {{ range . }}
+                    <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+                  {{ end }}
+                </ul>
+                {{ end }}
+              </div>
           </div>
+          
         </div>
       </div>
 
@@ -184,7 +93,7 @@
 
   
         <div class="p-3">
-          <a class="btn btn-success btn-block btn-lg" href="successful.html">CHỈ ĐƯỜNG<i class="feather-arrow-right"></i></a>
+          <a class="btn btn-success btn-block btn-lg" href="https://g.page/songtrangcoffee?share">CHỈ ĐƯỜNG<i class="feather-arrow-right"></i></a>
         </div>
       </div>
     </div>
