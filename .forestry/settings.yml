@@ -6,27 +6,27 @@ webhook_url:
 sections:
 - type: directory
   path: content
-  label: Pages
+  label: Trang
   create: all
   match: "*"
 - type: directory
   path: content/trending
-  label: Trending
+  label: Xu Hướng
   create: all
   match: "**/*"
 - type: directory
   path: content/promoted
-  label: Promoted
+  label: Quảng Cáo
   create: all
   match: "**/*"
 - type: directory
   path: content/post
-  label: Post
+  label: Bài Viết
   create: all
   match: "**/*"
 - type: directory
   path: content/popular
-  label: Popular
+  label: Phổ Biến
   create: all
   match: "**/*"
 upload_dir: static/uploads
