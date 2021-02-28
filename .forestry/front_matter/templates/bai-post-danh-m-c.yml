@@ -58,4 +58,5 @@ fields:
   name: tags
   label: tags
 pages:
+- content/post/soda-cam.md
 - content/post/soda-chanh.md
