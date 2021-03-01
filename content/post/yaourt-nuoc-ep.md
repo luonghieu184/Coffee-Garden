@@ -5,6 +5,6 @@ description = ""
 image = "/uploads/yaourt-nuoc-ep.jpg"
 price = "42.000"
 tags = []
-title = "Yaourt Đá"
+title = "Yaourt Nước Ép"
 
 +++
