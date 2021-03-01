@@ -13,9 +13,7 @@
 
         <div class="list-card-image">
             
-          <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i> 3.1
-              (300+)</span></div>
-          <div class="favourite-heart text-danger position-absolute"><a href="#"><i class="feather-heart"></i></a></div>
+          <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>          <div class="favourite-heart text-danger position-absolute"><a href="#"><i class="feather-heart"></i></a></div>
           <div class="member-plan position-absolute"><span class="badge badge-dark">{{range .Params.Categories}}{{. | humanize}}{{end}}</span></div>
           <a href="{{ .Permalink }}">
             {{ if .Params.image }}

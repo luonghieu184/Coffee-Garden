@@ -4,16 +4,15 @@
     <a class="font-weight-bold ml-auto" href="most_popular.html">XEM TẤT CẢ<i class="feather-chevrons-right"></i></a>
   </div>
   <div class="row">
-    {{ range first 4 (where site.RegularPages "Type" "post") }}
-    {{ if  in .Params.categories "Yaour"}}
+    {{ range $taxonomy := .Site.Taxonomies.categories }}
+    {{ range first 4 $taxonomy.Pages }}    {{ if  in .Params.categories "Yaour"}}
 
     <div class="col-md-3 pb-3">
       <div class="list-card bg-white  rounded overflow-hidden position-relative shadow-sm">
 
         <div class="list-card-image">
             
-          <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i> 3.1
-              (300+)</span></div>
+          <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i></span></div>
           <div class="favourite-heart text-danger position-absolute"><a href="#"><i class="feather-heart"></i></a></div>
           <div class="member-plan position-absolute"><span class="badge badge-dark">{{range .Params.Categories}}{{. | humanize}}{{end}}</span></div>
           <a href="{{ .Permalink }}">
@@ -49,7 +48,7 @@
     </div>
     {{ end }}
     {{ end }}
-
+    {{ end }}
   </div>
 
 </div>
