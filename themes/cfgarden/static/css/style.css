@@ -1411,3 +1411,6 @@ nav#TableOfContents ul li {
 nav#TableOfContents ul li a {
     color: #094e01;
 }
+.entry-content img {
+    width: 100% !important;
+}
