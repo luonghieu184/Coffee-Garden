@@ -4,8 +4,8 @@
     <a class="font-weight-bold ml-auto" href="most_popular.html">XEM TẤT CẢ<i class="feather-chevrons-right"></i></a>
   </div>
   <div class="row">
-    {{ range first 4 (where site.RegularPages "Type" "post") }}
-    {{ if  in .Params.categories "Trà"}}
+    {{ range $taxonomy := .Site.Taxonomies.categories }}
+    {{ range first 4 $taxonomy.Pages }}    {{ if  in .Params.categories "Trà"}}
 
     <div class="col-md-3 pb-3">
       <div class="list-card bg-white  rounded overflow-hidden position-relative shadow-sm">
@@ -49,7 +49,7 @@
     </div>
     {{ end }}
     {{ end }}
-
+    {{ end }}
   </div>
 
 </div>
