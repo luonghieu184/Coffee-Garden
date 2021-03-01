@@ -5,6 +5,6 @@ description = ""
 image = "/uploads/yaourt-trai-cay.jpg"
 price = "39.000"
 tags = []
-title = "Yaourt Đá"
+title = "Yaourt Trái Cây"
 
 +++
