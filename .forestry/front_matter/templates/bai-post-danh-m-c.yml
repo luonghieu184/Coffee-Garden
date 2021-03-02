@@ -58,6 +58,7 @@ fields:
   name: tags
   label: tags
 pages:
+- content/post/b-dau-mang-c-u-saboche-chanh-day.md
 - content/post/b-t-ngu-c-c-nong.md
 - content/post/cacao-s-a-da-nong.md
 - content/post/kem-1-vien.md
