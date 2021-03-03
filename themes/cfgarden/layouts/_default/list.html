@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<!-- page-title -->
+<section class="section bg-secondary">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h4>{{.Title}}</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page-title -->
+
+<!-- category post -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mt-5">
+        {{ $paginator := .Paginate .Data.Pages }}
+        <div class="row masonry-container">
+          {{ range $paginator.Pages }}
+          <div class="col-sm-6 mb-5">
+            <article class="text-center">
+              <img class="img-fluid mb-4" src="{{.Params.Image | absURL }}" alt="post-thumb">
+              <p class="text-uppercase mb-2">{{ .Params.Categories }}</p>
+              <h4 class="title-border"><a class="text-dark" href="{{.Permalink}}">{{.Title}}</a></h4>
+              <p>{{ .Summary }}</p>
+              <a href="{{.Permalink}}" class="btn btn-transparent">read more</a>
+            </article>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      <!-- /blog post -->
+    </div>
+  </div>
+</section>
+<!-- /category post -->
+
+{{ end }}
