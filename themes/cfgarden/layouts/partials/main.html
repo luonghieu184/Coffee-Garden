@@ -19,60 +19,22 @@
 
     <div class="container">
       <div class="cat-slider">
-        <div class="cat-item px-1 py-3">
-          <a class="bg-white rounded d-block p-2 text-center shadow-sm" href="trending.html">
-            <img alt="#" src="http://askbootstrap.com/preview/swiggiweb/img/icons/Fries.png" class="img-fluid mb-2">
-            <p class="m-0 small">Fries</p>
+        {{ range $taxonomy := .Site.Taxonomies.categories }}
+        {{ range $taxonomy.Pages }}
+        {{ if  in .Params.categories "Thức Uống Pha"}}
+        <div class="cat-item px-1 py-3 quick-product">
+          <a href="{{ .Permalink }}">
+            {{ if .Params.image }}
+             <img alt="{{ .Title }}" src="{{ .Params.image }}" class="img-fluid item-img w-100">
+            {{ else }}
+            <img alt="{{ .Title }}" src="/img/500x300.jpg" class="img-fluid item-img w-100">
+            {{ end }}
+            <p class="m-0 small">{{ .Title }}</p>
           </a>
         </div>
-        <div class="cat-item px-1 py-3">
-          <a class="bg-white rounded d-block p-2 text-center shadow-sm" href="trending.html">
-            <img alt="#" src="http://askbootstrap.com/preview/swiggiweb/img/icons/Fries.png" class="img-fluid mb-2">
-            <p class="m-0 small">Pizza</p>
-          </a>
-        </div>
-        <div class="cat-item px-1 py-3">
-          <a class="bg-white rounded d-block p-2 text-center shadow-sm" href="trending.html">
-            <img alt="#" src="http://askbootstrap.com/preview/swiggiweb/img/icons/Fries.png" class="img-fluid mb-2">
-            <p class="m-0 small">Burger</p>
-          </a>
-        </div>
-        <div class="cat-item px-1 py-3">
-          <a class="bg-white rounded d-block p-2 text-center shadow-sm" href="trending.html">
-            <img alt="#" src="http://askbootstrap.com/preview/swiggiweb/img/icons/Fries.png" class="img-fluid mb-2">
-            <p class="m-0 small">Sandwich</p>
-          </a>
-        </div>
-        <div class="cat-item px-1 py-3">
-          <a class="bg-white rounded d-block p-2 text-center shadow-sm" href="trending.html">
-            <img alt="#" src="http://askbootstrap.com/preview/swiggiweb/img/icons/Fries.png" class="img-fluid mb-2">
-            <p class="m-0 small">Coffee</p>
-          </a>
-        </div>
-        <div class="cat-item px-1 py-3">
-          <a class="bg-white rounded d-block p-2 text-center shadow-sm" href="trending.html">
-            <img alt="#" src="http://askbootstrap.com/preview/swiggiweb/img/icons/Fries.png" class="img-fluid mb-2">
-            <p class="m-0 small">Steak</p>
-          </a>
-        </div>
-        <div class="cat-item px-1 py-3">
-          <a class="bg-white rounded d-block p-2 text-center shadow-sm" href="trending.html">
-            <img alt="#" src="http://askbootstrap.com/preview/swiggiweb/img/icons/Fries.png" class="img-fluid mb-2">
-            <p class="m-0 small">ColaCan</p>
-          </a>
-        </div>
-        <div class="cat-item px-1 py-3">
-          <a class="bg-white rounded d-block p-2 text-center shadow-sm" href="trending.html">
-            <img alt="#" src="http://askbootstrap.com/preview/swiggiweb/img/icons/Fries.png" class="img-fluid mb-2">
-            <p class="m-0 small">Breakfast</p>
-          </a>
-        </div>
-        <div class="cat-item px-1 py-3">
-          <a class="bg-white rounded d-block p-2 text-center shadow-sm" href="trending.html">
-            <img alt="#" src="http://askbootstrap.com/preview/swiggiweb/img/icons/Fries.png" class="img-fluid mb-2">
-            <p class="m-0 small">Salad</p>
-          </a>
-        </div>
+        {{ end }}
+        {{ end }}
+        {{ end }}
       </div>
     </div>
 
@@ -83,7 +45,6 @@
 
       <div class="pt-4 pb-2 title d-flex align-items-center">
         <h5 class="m-0">ĐIỂM TÂM PHỔ BIẾN TRONG TUẦN</h5>
-        <a class="font-weight-bold ml-auto" href="trending.html">View all <i class="feather-chevrons-right"></i></a>
       </div>
 
       {{ partial "section/trending.html" . }}
@@ -111,26 +72,26 @@
   <div class="osahan-menu-fotter fixed-bottom bg-white px-3 py-2 text-center d-none">
     <div class="row">
       <div class="col selected">
-        <a href="home.html" class="text-danger small font-weight-bold text-decoration-none">
+        <a href="/" class="text-danger small font-weight-bold text-decoration-none">
           <p class="h4 m-0"><i class="feather-home text-danger"></i></p>
           TRANG CHỦ
         </a>
       </div>
       <div class="col">
-        <a href="most_popular.html" class="text-dark small font-weight-bold text-decoration-none">
+        <a href="/categories/popular" class="text-dark small font-weight-bold text-decoration-none">
           <p class="h4 m-0"><i class="feather-map-pin"></i></p>
           PHỔ BIẾN
         </a>
       </div>
  
       <div class="col">
-        <a href="favorites.html" class="text-dark small font-weight-bold text-decoration-none">
+        <a href="/" class="text-dark small font-weight-bold text-decoration-none">
           <p class="h4 m-0"><i class="feather-heart"></i></p>
           HỢP TÁC
         </a>
       </div>
       <div class="col">
-        <a href="profile.html" class="text-dark small font-weight-bold text-decoration-none">
+        <a href="/" class="text-dark small font-weight-bold text-decoration-none">
           <p class="h4 m-0"><i class="feather-user"></i></p>
           LIÊN HỆ
         </a>

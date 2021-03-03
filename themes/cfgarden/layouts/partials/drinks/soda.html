@@ -1,8 +1,13 @@
 <div class="soda">
     <div class="py-3 title d-flex align-items-center">
     <h5 class="m-0">THỨC UỐNG SODA</h5>
-    <a class="font-weight-bold ml-auto" href="most_popular.html">XEM TẤT CẢ<i class="feather-chevrons-right"></i></a>
-  </div><div class="row">
+    {{- if isset .Site.Taxonomies "categories" }}
+      {{- range $name, $items := .Site.Taxonomies.categories }}
+      {{ range first 1 $items.Pages }}
+      {{ if  in .Params.categories "SODA"}}
+        <a class="font-weight-bold ml-auto" href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">XEM TẤT CẢ<i class="feather-chevrons-right"></i></a>
+      {{- end }}{{- end }}{{- end }}
+    {{- end }}    </div><div class="row">
     {{ range $taxonomy := .Site.Taxonomies.categories }}
     {{ range first 4 $taxonomy.Pages }}    {{ if  in .Params.categories "SODA"}}
 
@@ -23,8 +28,9 @@
           <div class="p-3 position-relative">
             <div class="list-card-body">
               <h6 class="mb-1"><a href="{{ .Permalink }}" class="text-black">{{ .Title}}</a></h6>
-              <p class="text-gray mb-1 small">Từ Khóa 1 • Từ Khóa 2</p>
-              <p class="text-gray mb-1 rating">
+              <p class="text-gray mb-1 small">{{range .Params.tags}}
+                • <a class="font-weight-bold ml-auto" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+                {{. | humanize}}</a>{{end}}</p>              <p class="text-gray mb-1 rating">
               </p>
               <ul class="rating-stars list-unstyled">
                 
