@@ -4,7 +4,7 @@ date = 2021-02-27T17:00:00Z
 description = ""
 image = "/uploads/chanh-rum.jpg"
 price = "42.000"
-tags = []
+tags = ["Thức Uống Pha"]
 title = "Chanh Rum"
 
 +++
