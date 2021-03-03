@@ -20,3 +20,11 @@ canonifyURLs = true
   description = "s"
   twitter = "@coffeesongtrang"
 
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+
+[[related.indices]]
+  name = "categories"
+  weight = 100
