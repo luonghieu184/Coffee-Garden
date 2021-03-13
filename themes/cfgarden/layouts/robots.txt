@@ -1,0 +1,17 @@
+Sitemap: https://coffeesongtrang.com/sitemap.xml
+User-agent: *
+Allow: /
+Sitemap: https://coffeesongtrang.com/sitemap.xml
+
+User-agent: coccocbot
+Disallow: /cgi-bin
+Allow: /
+Sitemap: https://coffeesongtrang.com/sitemap.xml
+
+User-agent: bingbot
+Allow: /
+Sitemap: https://coffeesongtrang.com/sitemap.xml
+
+User-agent: Yandex
+Allow: /
+Sitemap: https://coffeesongtrang.com/sitemap.xml
