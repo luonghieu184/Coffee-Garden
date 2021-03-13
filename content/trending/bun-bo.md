@@ -9,7 +9,7 @@ title = "Bún Bò"
 type = "post"
 
 +++
-## Ẩm thực Huế tự hào với vô vàn món ngon khiến thực khách khắp ba miền 
+## Ẩm thực Huế tự hào với vô vàn món ngon khiến thực khách khắp ba miền 2021
 
 phải trầm trồ khen ngợi mỗi khi thưởng thức, trong số đó không thể không nói đến Bún bò. Tọa lạc tại **711 Đường Đỗ Xuân Hợp, Bình Trưng Đông, Quận 9, Thành phố Hồ Chí Minh, Vietnam** là quán quen của nhiều thực khách yêu thích cái hương vị ngọt ngào, đậm đà của món bún bò.
 
